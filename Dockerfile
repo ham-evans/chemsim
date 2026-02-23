@@ -25,7 +25,7 @@ COPY backend/pyproject.toml /app/backend/
 RUN pip install --no-cache-dir \
     fastapi uvicorn[standard] pydantic pydantic-settings \
     python-multipart websockets openai \
-    numpy pyscf geometric rdkit-pypi
+    numpy pyscf geometric rdkit
 
 COPY backend/ /app/backend/
 
