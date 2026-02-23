@@ -24,7 +24,8 @@ COPY --from=builder /app/engine/build/chemsim_engine*.so /app/engine/build/
 COPY backend/pyproject.toml /app/backend/
 RUN pip install --no-cache-dir \
     fastapi uvicorn[standard] pydantic pydantic-settings \
-    python-multipart websockets openai
+    python-multipart websockets openai \
+    numpy pyscf geometric
 
 COPY backend/ /app/backend/
 
